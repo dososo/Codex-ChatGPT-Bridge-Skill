@@ -14,7 +14,10 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from bridge.cli_encoding import configure_utf8_stdio  # noqa: E402
 from bridge.ordinary_journey import compact_journey_for_status  # noqa: E402
+
+configure_utf8_stdio()
 
 VERIFY_FIRST_USE = ROOT / ".agents" / "skills" / "codex-chatgpt-bridge" / "scripts" / "verify_first_use.py"
 SESSION_OUTPUT = ".ai-bridge-test-runs/first-use/chatgpt-collaboration-session.md"
@@ -46,13 +49,16 @@ def run_json_command(command: list[str], *, timeout: int = 120) -> dict[str, Any
         command,
         cwd=str(ROOT),
         text=True,
+        encoding="utf-8",
         capture_output=True,
         timeout=timeout,
     )
     parsed: Any = None
-    if proc.stdout.strip():
+    stdout = proc.stdout or ""
+    stderr = proc.stderr or ""
+    if stdout.strip():
         try:
-            parsed = json.loads(proc.stdout)
+            parsed = json.loads(stdout)
         except json.JSONDecodeError:
             parsed = None
     return {
@@ -60,8 +66,8 @@ def run_json_command(command: list[str], *, timeout: int = 120) -> dict[str, Any
         "returncode": proc.returncode,
         "command_argv": command,
         "command": shlex.join(command),
-        "stdout_tail": proc.stdout[-1200:],
-        "stderr_tail": proc.stderr[-1200:],
+        "stdout_tail": stdout[-1200:],
+        "stderr_tail": stderr[-1200:],
         "json": parsed,
     }
 
