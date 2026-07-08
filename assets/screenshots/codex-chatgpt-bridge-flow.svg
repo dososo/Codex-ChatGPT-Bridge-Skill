@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Codex ChatGPT Bridge collaboration flow</title>
+  <desc id="desc">A clean diagram showing Codex, Bridge, ChatGPT, and user confirmation steps.</desc>
+  <rect width="1200" height="620" fill="#f7f8fb"/>
+  <rect x="70" y="70" width="1060" height="480" rx="22" fill="#ffffff" stroke="#d8dee9"/>
+  <text x="100" y="126" fill="#111827" font-family="Arial, sans-serif" font-size="34" font-weight="700">Codex ChatGPT Bridge Skill</text>
+  <text x="100" y="164" fill="#4b5563" font-family="Arial, sans-serif" font-size="18">ChatGPT plans and reviews. Codex edits, tests, and verifies. The user approves every boundary crossing.</text>
+
+  <rect x="105" y="235" width="220" height="140" rx="16" fill="#eef6ff" stroke="#93c5fd"/>
+  <text x="135" y="286" fill="#1f2937" font-family="Arial, sans-serif" font-size="25" font-weight="700">Codex</text>
+  <text x="135" y="322" fill="#374151" font-family="Arial, sans-serif" font-size="16">Read repo</text>
+  <text x="135" y="348" fill="#374151" font-family="Arial, sans-serif" font-size="16">Edit code and run tests</text>
+
+  <rect x="385" y="235" width="220" height="140" rx="16" fill="#f2fbf5" stroke="#86efac"/>
+  <text x="415" y="286" fill="#1f2937" font-family="Arial, sans-serif" font-size="25" font-weight="700">Bridge</text>
+  <text x="415" y="322" fill="#374151" font-family="Arial, sans-serif" font-size="16">Minimal context</text>
+  <text x="415" y="348" fill="#374151" font-family="Arial, sans-serif" font-size="16">Task and result sync</text>
+
+  <rect x="665" y="235" width="220" height="140" rx="16" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="695" y="286" fill="#1f2937" font-family="Arial, sans-serif" font-size="25" font-weight="700">ChatGPT</text>
+  <text x="695" y="322" fill="#374151" font-family="Arial, sans-serif" font-size="16">Plan task brief</text>
+  <text x="695" y="348" fill="#374151" font-family="Arial, sans-serif" font-size="16">Review risks</text>
+
+  <rect x="930" y="235" width="160" height="140" rx="16" fill="#fdf2f8" stroke="#f9a8d4"/>
+  <text x="962" y="286" fill="#1f2937" font-family="Arial, sans-serif" font-size="25" font-weight="700">User</text>
+  <text x="962" y="322" fill="#374151" font-family="Arial, sans-serif" font-size="16">Approves send</text>
+  <text x="962" y="348" fill="#374151" font-family="Arial, sans-serif" font-size="16">Approves action</text>
+
+  <path d="M327 305 H382" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M607 305 H662" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M887 305 H927" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M775 378 C775 450 505 450 505 378" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M495 378 C495 495 215 495 215 378" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <text x="100" y="455" fill="#111827" font-family="Arial, sans-serif" font-size="20" font-weight="700">Safety defaults</text>
+  <text x="100" y="488" fill="#4b5563" font-family="Arial, sans-serif" font-size="16">No secrets, .env, private keys, cookies, .git, full Connector URLs, or automatic execution of ChatGPT suggestions.</text>
+  <text x="100" y="518" fill="#4b5563" font-family="Arial, sans-serif" font-size="16">Full Connector is claimed only after real official tool calls and audit evidence.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

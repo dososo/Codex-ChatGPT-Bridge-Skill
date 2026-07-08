@@ -1,0 +1,10 @@
+name: Setup failed
+description: Report setup or doctor failures.
+body:
+  - type: textarea
+    id: output
+    attributes:
+      label: Sanitized output
+      description: Paste doctor/setup output after removing tokens and Connector URLs.
+    validations:
+      required: true

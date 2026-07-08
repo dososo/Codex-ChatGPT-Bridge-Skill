@@ -1,0 +1,9 @@
+name: Security report
+description: Report a security issue without exposing secrets.
+body:
+  - type: textarea
+    id: report
+    attributes:
+      label: Sanitized security report
+    validations:
+      required: true

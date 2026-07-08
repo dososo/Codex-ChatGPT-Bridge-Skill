@@ -1,0 +1,39 @@
+name: Capability failed
+description: Report sanitized read/write smoke capability mismatch without secrets or tokens.
+body:
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Observed mode
+      options:
+        - full_connector
+        - read_only_connector
+        - packet_or_manual
+        - unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: failure_stage
+    attributes:
+      label: Failure stage
+      description: Pick the closest stage so maintainers can classify the issue quickly.
+      options:
+        - real_evidence_missing
+        - read_smoke_failed
+        - write_smoke_failed
+        - connector_unreachable
+        - tool_schema_stale
+        - auth_or_token
+        - bridge_not_running
+        - codex_mcp_config
+        - stale_claim
+        - needs_more_info
+    validations:
+      required: true
+  - type: textarea
+    id: sanitized_output
+    attributes:
+      label: Sanitized smoke output
+      description: Remove tokens, full Connector URLs, private paths, .env content, cookies, and private keys. Maintainers may run scripts/classify_capability_issue.py on this text.
+    validations:
+      required: true

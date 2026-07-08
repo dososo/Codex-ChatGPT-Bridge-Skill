@@ -1,0 +1,10 @@
+name: Connector failed
+description: Report ChatGPT Connector creation or refresh failures.
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Do not include full Connector URLs or tokens.
+    validations:
+      required: true

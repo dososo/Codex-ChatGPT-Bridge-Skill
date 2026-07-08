@@ -1,0 +1,13 @@
+[project]
+name = "codex-chatgpt-bridge-skill"
+version = "0.5.0"
+description = "Local-first Codex and ChatGPT collaboration bridge"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Codex ChatGPT Bridge contributors" }]
+
+[tool.codex-chatgpt-bridge]
+schema_version = "1.1"
+connector_tool_schema_version = "1.2"
+default_port = 8765

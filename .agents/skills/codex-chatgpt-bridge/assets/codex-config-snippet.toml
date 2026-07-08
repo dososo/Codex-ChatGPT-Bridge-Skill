@@ -1,0 +1,21 @@
+[mcp_servers.codex_chatgpt_bridge]
+command = "python3"
+args = [
+  "/absolute/path/to/repo/scripts/codex_bridge_stdio_mcp.py",
+  "--repo-root",
+  "/absolute/path/to/repo"
+]
+enabled = true
+default_tools_approval_mode = "prompt"
+enabled_tools = [
+  "bridge_health",
+  "bridge_push_task",
+  "bridge_pull_result",
+  "bridge_list_my_artifacts",
+  "bridge_cancel_task"
+]
+tool_timeout_sec = 45
+startup_timeout_sec = 10
+
+# 不要把 local_token、remote_token 或完整 Connector URL 写入这里。
+# 本地 Codex 连接使用 stdio，由 Codex 启动本地 server。

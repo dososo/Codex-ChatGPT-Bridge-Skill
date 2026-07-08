@@ -1,0 +1,75 @@
+# Local Bridge runtime state
+.ai-bridge/
+.ai-bridge/tokens/
+.ai-bridge/logs/
+.ai-bridge/tmp/
+.ai-bridge/*.secret
+.ai-bridge/*.token
+.ai-bridge-test-runs/
+
+# Local Codex/app configuration
+.codex/
+!.codex/.gitkeep
+
+# Internal planning, release evidence, and local acceptance artifacts
+tasks/
+/*zh-CN*.md
+!/README.zh-CN.md
+
+# Public release allowlist for docs/scripts/tests. Use git add -f only if a
+# maintainer intentionally wants to publish a new item from these folders.
+docs/*
+!docs/quickstart.zh-CN.md
+!docs/first-run.zh-CN.md
+!docs/connector-setup.zh-CN.md
+!docs/manual-mode.zh-CN.md
+!docs/security.zh-CN.md
+!docs/troubleshooting.zh-CN.md
+!docs/examples.zh-CN.md
+!docs/chatgpt-prompt-templates.zh-CN.md
+
+scripts/*
+!scripts/build_authorized_browser_session_plan.py
+!scripts/build_chatgpt_browser_assist_packet.py
+!scripts/build_chatgpt_collaboration_message.py
+!scripts/build_chatgpt_collaboration_session.py
+!scripts/codex_bridge_stdio_mcp.py
+!scripts/intake_chatgpt_result.py
+
+tests/*
+!tests/__init__.py
+!tests/helpers.py
+!tests/test_bridge_health.py
+!tests/test_task_flow.py
+!tests/test_tool_schemas.py
+!tests/test_mcp_protocol.py
+!tests/test_http_auth.py
+!tests/test_secret_scan.py
+!tests/test_redaction.py
+!tests/test_path_safety.py
+!tests/test_review_result.py
+!tests/test_intake_chatgpt_result.py
+!tests/test_push_task_confirmation.py
+!tests/test_fallback_and_capability.py
+!tests/test_chatgpt_collaboration_message.py
+
+.agents/skills/codex-chatgpt-bridge/references/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# Local environment and OS files
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Generated package/build artifacts
+build/
+dist/
+*.egg-info/
+.codex/config.toml
