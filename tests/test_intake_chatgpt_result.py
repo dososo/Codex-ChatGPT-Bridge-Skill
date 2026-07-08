@@ -65,6 +65,7 @@ class IntakeChatGPTResultTest(unittest.TestCase):
             input=fenced_result(task_id),
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
             check=True,
         )
@@ -96,6 +97,7 @@ class IntakeChatGPTResultTest(unittest.TestCase):
             input=fenced_result(task_id),
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
             check=True,
         )
@@ -116,6 +118,7 @@ class IntakeChatGPTResultTest(unittest.TestCase):
             input=fenced_result("unknown"),
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
         )
         result = json.loads(completed.stdout)
@@ -147,6 +150,7 @@ class IntakeChatGPTResultTest(unittest.TestCase):
             input=payload,
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
         )
         result = json.loads(completed.stdout)
@@ -162,6 +166,7 @@ class IntakeChatGPTResultTest(unittest.TestCase):
             input=fenced_result("unknown"),
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
         )
         result = json.loads(completed.stdout)

@@ -4,11 +4,19 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from bridge.cli_encoding import configure_utf8_stdio
+
+configure_utf8_stdio()
+
 PROMPT_ASSET = ROOT / ".agents" / "skills" / "codex-chatgpt-bridge" / "assets" / "right-chatgpt-prompts.md"
 VALID_MODES = {
     "task-brief": "18.1A Codex 执行任务单提示词",

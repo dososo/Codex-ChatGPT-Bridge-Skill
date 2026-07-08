@@ -28,6 +28,7 @@ class PushTaskConfirmationTest(unittest.TestCase):
             ],
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
             check=True,
         )
@@ -56,6 +57,7 @@ class PushTaskConfirmationTest(unittest.TestCase):
             ],
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
             check=True,
         )
@@ -84,6 +86,7 @@ class PushTaskConfirmationTest(unittest.TestCase):
             ],
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
             check=True,
         )
@@ -119,6 +122,7 @@ class PushTaskConfirmationTest(unittest.TestCase):
                 ],
                 cwd=str(ROOT),
                 text=True,
+                encoding="utf-8",
                 capture_output=True,
                 check=True,
             )
@@ -155,6 +159,7 @@ class PushTaskConfirmationTest(unittest.TestCase):
             ],
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
         )
 

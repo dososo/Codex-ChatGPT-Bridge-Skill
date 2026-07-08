@@ -18,10 +18,13 @@ REVIEW_RESULT_SCRIPT = ".agents/skills/codex-chatgpt-bridge/scripts/review_resul
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from bridge.cli_encoding import configure_utf8_stdio
 from bridge.errors import BridgeError
 from bridge.schemas import normalize_result_input
 from bridge.state import BridgeState
 from bridge.tools import BridgeTools, sanitize_result_payload
+
+configure_utf8_stdio()
 
 
 def load_import_result_module() -> Any:

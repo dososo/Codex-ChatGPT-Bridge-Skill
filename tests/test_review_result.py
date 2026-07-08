@@ -87,6 +87,7 @@ class ReviewResultTest(unittest.TestCase):
             [sys.executable, str(SCRIPTS_DIR / "review_result.py"), "--repo-root", str(repo), "--json"],
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
             check=True,
         )

@@ -144,6 +144,7 @@ class FallbackCapabilityTest(unittest.TestCase):
             input=payload,
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
             check=True,
         )
@@ -154,6 +155,7 @@ class FallbackCapabilityTest(unittest.TestCase):
             [sys.executable, str(scripts_dir / "pull_result.py"), "--task-id", str(pushed["task_id"]), "--repo-root", str(repo), "--json"],
             cwd=str(ROOT),
             text=True,
+            encoding="utf-8",
             capture_output=True,
             check=True,
         )

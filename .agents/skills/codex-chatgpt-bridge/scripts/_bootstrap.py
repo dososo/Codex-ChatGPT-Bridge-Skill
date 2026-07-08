@@ -15,3 +15,7 @@ def repo_root() -> Path:
 
 
 ROOT = repo_root()
+
+from bridge.cli_encoding import configure_utf8_stdio
+
+configure_utf8_stdio()
