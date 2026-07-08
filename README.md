@@ -6,6 +6,14 @@
 
 ![Codex ChatGPT Bridge 协同流程](assets/screenshots/codex-chatgpt-bridge-flow.svg)
 
+<p align="center">
+  <img src="assets/screenshots/chatgpt-collaboration-loop.png" alt="Codex 与右侧 ChatGPT 协同界面示例" width="920">
+</p>
+
+<p align="center">
+  <sub>Codex 负责本地执行与验证，右侧 ChatGPT 负责规划、审计和结构化建议；真实 Connector 能力仍以工具调用和 audit 记录为准。</sub>
+</p>
+
 ## 最快入口
 
 在 Codex 桌面版里打开这个仓库，然后直接说：
@@ -106,6 +114,28 @@ python scripts/build_chatgpt_collaboration_session.py --dry-run
 ```
 
 当你确认发送时，Codex 才会创建真实 Bridge task，并生成带真实 `task_id` 的 ChatGPT 消息。仅生成消息不会打开网页、不会发送上下文、不会执行建议。
+
+### 界面引导示例
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <img src="assets/screenshots/chatgpt-app-connect.jpeg" alt="ChatGPT 连接确认界面" width="100%">
+      <br>
+      <sub>1. 在 ChatGPT 侧确认连接。Codex 会说明用途和安全边界，连接前不会发送项目上下文。</sub>
+    </td>
+    <td width="33%" valign="top">
+      <img src="assets/screenshots/chatgpt-app-settings.jpeg" alt="ChatGPT 应用设置界面" width="100%">
+      <br>
+      <sub>2. 连接后可以在应用设置里查看权限。Bridge 只暴露受控工具，不让 ChatGPT 直接改源码或执行命令。</sub>
+    </td>
+    <td width="33%" valign="top">
+      <img src="assets/screenshots/codex-confirmation-guide.jpeg" alt="Codex 创建前确认引导" width="100%">
+      <br>
+      <sub>3. 遇到账号授权、创建应用、发送上下文等关键动作时，Codex 会停下来让用户确认。</sub>
+    </td>
+  </tr>
+</table>
 
 ## MCP Connector 能力说明
 

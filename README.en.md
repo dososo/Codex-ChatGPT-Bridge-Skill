@@ -6,6 +6,14 @@
 
 ![Codex ChatGPT Bridge flow](assets/screenshots/codex-chatgpt-bridge-flow.svg)
 
+<p align="center">
+  <img src="assets/screenshots/chatgpt-collaboration-loop.png" alt="Codex and right-side ChatGPT collaboration UI" width="920">
+</p>
+
+<p align="center">
+  <sub>Codex owns local execution and verification. Right-side ChatGPT plans, audits, and returns structured suggestions. Real Connector capability is still determined by tool calls and audit records.</sub>
+</p>
+
 ## Quick Start
 
 Open this repository in Codex Desktop and ask:
@@ -101,6 +109,28 @@ python scripts/build_chatgpt_collaboration_session.py --dry-run
 ```
 
 Codex creates a real Bridge task only after confirmation. Generating a message does not open ChatGPT, send context, or execute suggestions.
+
+### Guided UI Example
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <img src="assets/screenshots/chatgpt-app-connect.jpeg" alt="ChatGPT app connection confirmation" width="100%">
+      <br>
+      <sub>1. Confirm the ChatGPT app connection. Codex explains the purpose and safety boundary before sending any project context.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <img src="assets/screenshots/chatgpt-app-settings.jpeg" alt="ChatGPT app settings" width="100%">
+      <br>
+      <sub>2. Review the app permissions in ChatGPT settings. The Bridge exposes controlled tools and does not let ChatGPT edit source files or run commands.</sub>
+    </td>
+    <td width="33%" valign="top">
+      <img src="assets/screenshots/codex-confirmation-guide.jpeg" alt="Codex confirmation guide" width="100%">
+      <br>
+      <sub>3. For account authorization, app creation, context sharing, or other sensitive actions, Codex stops and asks for confirmation.</sub>
+    </td>
+  </tr>
+</table>
 
 ## MCP Connector Capability
 
